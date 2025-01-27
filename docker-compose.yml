@@ -4,11 +4,12 @@ services:
     container_name: elasticsearch
     environment:
       - discovery.type=single-node
-      - xpac.security.enable=false
+      - xpack.security.enabled=false
     ports:
       - "9200:9200"
     volumes:
       - esdata:/usr/share/elasticsearch/data
+
 
 
   logstash:
